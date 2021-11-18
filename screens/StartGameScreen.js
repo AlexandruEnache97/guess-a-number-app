@@ -12,6 +12,8 @@ import colors from "../constants/colors";
 import Card from "../components/Card";
 import Input from "../components/Input";
 import NumberContainer from "../components/NumberContainer";
+import BodyText from "../components/BodyText";
+import TitleText from "../components/TitleText";
 
 const StartGameScreen = ({ startGameHandler }) => {
   const [insertedNumber, setInsertedNumber] = useState("");
@@ -54,7 +56,7 @@ const StartGameScreen = ({ startGameHandler }) => {
   if (confirmed) {
     confirmedOutput = (
       <Card style={styles.confirmContainer}>
-        <Text>You selected</Text>
+        <BodyText>You selected</BodyText>
         <NumberContainer selectedNumber={selectedNumber} />
         <Button
           title="Start game"
@@ -72,9 +74,9 @@ const StartGameScreen = ({ startGameHandler }) => {
       }}
     >
       <View style={styles.screen}>
-        <Text style={styles.title}>Start a New Game!</Text>
+        <TitleText>Start a New Game!</TitleText>
         <Card style={styles.inputContainer}>
-          <Text>Select a Number</Text>
+          <BodyText>Select a Number</BodyText>
           <Input
             value={insertedNumber}
             onChangeText={onNumberChange}
@@ -111,10 +113,6 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     alignItems: "center",
-  },
-  title: {
-    fontSize: 20,
-    marginVertical: 10,
   },
   inputContainer: {
     width: 300,

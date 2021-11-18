@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     color: colors.textSecondary,
     fontSize: 20,
+    fontFamily: "open-sans-bold",
   },
 });
 
